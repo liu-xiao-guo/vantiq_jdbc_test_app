@@ -1,0 +1,14 @@
+RULE checkSourceNotification
+WHEN MESSAGE ARRIVES FROM JDBC1 AS message
+try {  
+    // Creating a map of each row, used to INSERT into our type
+    var resultData = {}
+    resultData.name = message.name
+    resultData.number = message.number
+    
+    // Inserting the map into our JDBCType
+    UPSERT JDBCType(resultData)
+} catch (error) {
+    // Catching any errors and throwing the exception.
+    exception(error.code, error.message)
+}

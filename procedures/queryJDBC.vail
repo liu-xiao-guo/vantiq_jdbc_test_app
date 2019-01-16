@@ -1,0 +1,34 @@
+PROCEDURE queryJDBC()
+
+var res = {}
+res.arr = []
+
+try 
+{        
+    // Normal SELECT Statement in VAIL, but using WITH Clause is important.
+    SELECT * FROM SOURCE JDBC1 AS results WITH
+    // WITH Clause specifies the query, whose value is the SQL Query.
+    // This parameter must be named 'query’.
+
+    query: "SELECT name, number FROM myTable" 
+
+    {
+        // Iterating over each row of data in 'results'
+        FOR (row in results) {
+            // Creating a map of each row, used to INSERT into our type
+    	    var resultData = {}
+    	    resultData.name = row.name
+    	    resultData.number = row.number
+            log.info("name: " + row.name)
+        	log.info("number: " + row.number)
+    	
+    		res.arr.push(resultData)
+       }
+    }
+} catch (error) {
+    // Catching any errors and throwing the exception.
+    exception(error.code, error.message)
+}
+
+return res
+

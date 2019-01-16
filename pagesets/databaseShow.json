@@ -1,0 +1,124 @@
+{
+  "controllers" : {
+    "client" : { },
+    "dataStream" : {
+      "databaseStream" : { }
+    },
+    "page" : {
+      "Start" : {
+        "widgets" : { }
+      }
+    }
+  },
+  "isLaunchable" : false,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "JDBCType"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 0,
+      "name" : "databaseStream",
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 4,
+      "updateInterval" : 5,
+      "uuid" : "1804fc32-db2e-4097-9660-4b7969556b1d",
+      "v" : 1
+    } ]
+  },
+  "name" : "databaseShow",
+  "options" : {
+    "badgeCount" : 0,
+    "description" : "",
+    "showGridWhileEditing" : false,
+    "theme" : {
+      "backgroundColor" : "#ffffff",
+      "borderColor" : "#d3d6db",
+      "cardAccentColor" : "#ffffff",
+      "cardColor" : "#3c424d",
+      "foregroundColor" : "#566076",
+      "label" : "Light",
+      "name" : "light",
+      "titleBarColor" : "#f0f2f8",
+      "v" : 2
+    },
+    "v" : 3
+  },
+  "targetDevice" : "browser",
+  "views" : {
+    "Start" : {
+      "bodyChildren" : [ {
+        "CSSClass" : "vantiqDataTable",
+        "actionMenuLabel" : null,
+        "actionMenuTopic" : null,
+        "borderColor" : "Default",
+        "borderRadius" : 4,
+        "borderWidth" : 1,
+        "cellFontColor" : "#000000",
+        "cellFontFace" : "inherit",
+        "cellFontSize" : 14,
+        "cellFontStyle" : "plain",
+        "columns" : [ {
+          "colorRules" : null,
+          "dataType" : "String",
+          "propertyName" : "name",
+          "selected" : false,
+          "title" : "name"
+        }, {
+          "colorRules" : null,
+          "dataType" : "String",
+          "propertyName" : "number",
+          "selected" : false,
+          "title" : "number"
+        } ],
+        "dataStreamGroupedByFiltersString" : "",
+        "dataStreamPropertyList" : [ ],
+        "dataStreamUUID" : "1804fc32-db2e-4097-9660-4b7969556b1d",
+        "dataType" : null,
+        "h" : 268,
+        "headerFontColor" : "#000000",
+        "headerFontFace" : "inherit",
+        "headerFontSize" : 14,
+        "headerFontStyle" : "plain",
+        "heightPolicy" : 0,
+        "horzGravity" : 4,
+        "isDraggable" : true,
+        "isSelectable" : true,
+        "name" : "DataTable1",
+        "operation" : "insert",
+        "propertyName" : null,
+        "rowsPerPage" : 5,
+        "type" : "DataTableWidget",
+        "v" : 14,
+        "vertGravity" : 4,
+        "w" : 574,
+        "widthPolicy" : 1,
+        "x" : 128,
+        "y" : 44.5
+      } ],
+      "data" : {
+        "properties" : { }
+      },
+      "fields" : [ ],
+      "footerChildren" : [ ],
+      "layoutType" : "browser",
+      "responseTopic" : "/my/response/topic"
+    }
+  }
+}

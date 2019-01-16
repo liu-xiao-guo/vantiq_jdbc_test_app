@@ -1,0 +1,5 @@
+RULE onJdbcMessageArrived
+WHEN MESSAGE ARRIVES FROM JDBC1 as msg
+
+log.info("name: " + msg.name)
+log.info("number: " + msg.number)

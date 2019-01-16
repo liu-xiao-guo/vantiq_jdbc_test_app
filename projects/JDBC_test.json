@@ -1,0 +1,326 @@
+{
+  "links" : [ {
+    "source" : "source/JDBC1",
+    "target" : "rule/onJdbcMessageArrived"
+  }, {
+    "source" : "source/JDBC1",
+    "target" : "procedure/queryJDBC"
+  }, {
+    "source" : "source/JDBC1",
+    "target" : "rule/checkSourceNotification"
+  }, {
+    "source" : "rule/checkSourceNotification",
+    "target" : "type/JDBCType"
+  }, {
+    "source" : "type/JDBCType",
+    "target" : "client/databaseShow"
+  }, {
+    "source" : "client/databaseShow",
+    "target" : "topic//my/response/topic"
+  } ],
+  "name" : "JDBC_test",
+  "options" : {
+    "description" : "",
+    "dockCollapsed" : false,
+    "dockSort" : 1,
+    "filterBitArray" : "ffffffffffffffffffffffffffffffff",
+    "isModeloProject" : true,
+    "layoutStyle" : "tile",
+    "showGrid" : true,
+    "tileColumns" : 2,
+    "tileRows" : 2,
+    "v" : 2
+  },
+  "resources" : [ {
+    "label" : "/my/response/topic",
+    "name" : "/my/response/topic",
+    "node" : {
+      "x" : 497.85451990062523,
+      "y" : 304.1559923962545
+    },
+    "type" : 10
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "JDBC1",
+    "name" : "JDBC1",
+    "node" : {
+      "x" : 263.8711611636992,
+      "y" : 166.1756280289044
+    },
+    "timestamp" : "2018-12-05T02:25:58.339Z",
+    "type" : 4
+  }, {
+    "label" : "JDBCType",
+    "name" : "JDBCType",
+    "node" : {
+      "x" : 428.43960333717,
+      "y" : 228.08981750521434
+    },
+    "timestamp" : "2018-12-05T05:26:40.974Z",
+    "type" : 1
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out" ],
+      "procedures" : [ "exception" ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "JDBC1" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ "out" ],
+      "types" : [ "JDBCType" ]
+    },
+    "label" : "checkSourceNotification",
+    "name" : "checkSourceNotification",
+    "node" : {
+      "x" : 454.30825088722935,
+      "y" : 154.27151470136815
+    },
+    "timestamp" : "2018-12-05T05:26:47.137Z",
+    "type" : 2
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ ],
+      "sources" : [ ],
+      "topicHash" : [ "out" ],
+      "topics" : [ "/my/response/topic" ],
+      "typeHash" : [ "in" ],
+      "types" : [ "JDBCType" ]
+    },
+    "label" : "databaseShow",
+    "name" : "databaseShow",
+    "node" : {
+      "x" : 357.91500096026783,
+      "y" : 367.04582583971006
+    },
+    "timestamp" : "2018-12-12T01:58:36.477Z",
+    "type" : 15
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ ],
+      "procedures" : [ ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "JDBC1" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "onJdbcMessageArrived",
+    "name" : "onJdbcMessageArrived",
+    "node" : {
+      "x" : 301.61275237272827,
+      "y" : 294.0159149788269
+    },
+    "timestamp" : "2018-12-05T05:13:47.025Z",
+    "type" : 2
+  }, {
+    "inventory" : {
+      "appmodelHash" : [ ],
+      "appmodels" : [ ],
+      "collaborationHash" : [ ],
+      "collaborations" : [ ],
+      "pagesetHash" : [ ],
+      "pagesets" : [ ],
+      "procedureHash" : [ "out", "out" ],
+      "procedures" : [ "res.arr.push", "exception" ],
+      "sourceHash" : [ "in" ],
+      "sources" : [ "JDBC1" ],
+      "topicHash" : [ ],
+      "topics" : [ ],
+      "typeHash" : [ ],
+      "types" : [ ]
+    },
+    "label" : "queryJDBC",
+    "name" : "queryJDBC",
+    "node" : {
+      "x" : 170.8856409273133,
+      "y" : 107.88123596089558
+    },
+    "timestamp" : "2018-12-12T01:55:56.863Z",
+    "type" : 3
+  }, {
+    "name" : "system.sourceimpls",
+    "node" : {
+      "x" : 479.4972373536027,
+      "y" : 80.49955291013573
+    },
+    "timestamp" : "2017-08-31T19:49:15.059Z",
+    "type" : 1
+  } ],
+  "tools" : [ {
+    "isPinned" : true,
+    "name" : "Project Resource Graph",
+    "pane" : {
+      "c" : 0,
+      "lastUsed" : 1544580709304,
+      "r" : 0
+    },
+    "toolOptions" : {
+      "scaleAndTranslationState" : {
+        "lastZoomRequest" : 0,
+        "scale" : 0.659753955386447,
+        "translate" : [ 195.80542016148945, -4.170626129568525 ]
+      }
+    },
+    "type" : 1
+  }, {
+    "isPinned" : false,
+    "name" : "Quick Start",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1543976672517,
+      "r" : -1
+    },
+    "type" : 36
+  }, {
+    "isPinned" : false,
+    "name" : "Project Contents",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1543976689534,
+      "r" : -1
+    },
+    "type" : 2
+  }, {
+    "isPinned" : false,
+    "name" : "Log Records Query",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1543986961245,
+      "r" : -1
+    },
+    "type" : 18
+  }, {
+    "isPinned" : false,
+    "name" : "Autopsies Query",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1543986981404,
+      "r" : -1
+    },
+    "type" : 37
+  }, {
+    "isPinned" : false,
+    "name" : "onJdbcMessageArrived",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1544580703414,
+      "r" : -1
+    },
+    "resourceKey" : "rule/onJdbcMessageArrived",
+    "type" : 3
+  }, {
+    "isPinned" : false,
+    "name" : "checkSourceNotification",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1544580703450,
+      "r" : -1
+    },
+    "resourceKey" : "rule/checkSourceNotification",
+    "type" : 3
+  }, {
+    "isPinned" : false,
+    "name" : "JDBCType",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1544579785600,
+      "r" : -1
+    },
+    "resourceKey" : "type/JDBCType",
+    "type" : 6
+  }, {
+    "isPinned" : false,
+    "name" : "JDBC1",
+    "pane" : {
+      "c" : 1,
+      "lastUsed" : 1544580735120,
+      "r" : 0
+    },
+    "resourceKey" : "source/JDBC1",
+    "type" : 5
+  }, {
+    "isPinned" : false,
+    "name" : "JDBC1",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1544579615315,
+      "r" : -1
+    },
+    "resourceKey" : "source/JDBC1",
+    "type" : 11
+  }, {
+    "isPinned" : false,
+    "name" : "queryJDBC",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1544579769742,
+      "r" : -1
+    },
+    "resourceKey" : "procedure/queryJDBC",
+    "type" : 24
+  }, {
+    "isPinned" : false,
+    "name" : "databaseShow",
+    "pane" : {
+      "c" : -1,
+      "lastUsed" : 1544580703709,
+      "r" : -1
+    },
+    "resourceKey" : "client/databaseShow",
+    "toolOptions" : {
+      "isRunning" : true
+    },
+    "type" : 63
+  }, {
+    "isPinned" : false,
+    "name" : "system.sourceimpls",
+    "pane" : {
+      "c" : 1,
+      "lastUsed" : 1544581210341,
+      "r" : 1
+    },
+    "resourceKey" : "type/system.sourceimpls",
+    "type" : 6
+  } ],
+  "type" : "dev",
+  "views" : [ {
+    "name" : "Main",
+    "projectToolKeys" : [ "graph/Project Resource Graph", "quickstartdev/Quick Start", "list/Project Contents", "logquery/Log Records Query", "autopsyquery/Autopsies Query", "cmeditorrule/onJdbcMessageArrived", "cmeditorrule/checkSourceNotification", "subtypeeditor/JDBCType", "subsourceeditor/JDBC1", "dataviewer/JDBC1", "cmeditorprocedure/queryJDBC", "client/databaseShow", "subtypeeditor/system.sourceimpls", "findrecordresults/All Objects of type sourceimpls" ]
+  } ]
+}
